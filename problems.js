@@ -7,10 +7,9 @@
     Write a function `plusTen` that takes in a number as an argument and
     returns the sum of that number and 10.
 */
-function plusFive(num) {
-    return num + 5;
+function plusTen(num) {
+  return num + 10;
 }
-
 
 /*
     Original:
@@ -22,13 +21,12 @@ function plusFive(num) {
     multiples of 7 that are less than max.
 */
 function printFives(max) {
-    for (let i = 0; i < max; i++) {
-        if (i % 5 === 0) {
-            console.log(i);
-        }
+  for (let i = 0; i < max; i++) {
+    if (i % 5 === 0) {
+      console.log(i);
     }
+  }
 }
-
 
 /*
     Original:
@@ -44,9 +42,8 @@ function printFives(max) {
     the sentence, and `false` if neither or only 1 is found.
 */
 function eitherStringIncluded(sentence, word1, word2) {
-    return sentence.includes(word1) || sentence.includes(word2);
+  return sentence.includes(word1) || sentence.includes(word2);
 }
-
 
 /*
     Original:
@@ -59,13 +56,12 @@ function eitherStringIncluded(sentence, word1, word2) {
     you get when you multiply all the numbers together.
 */
 function sumArray(arr) {
-    let sum = 0;
-    for (let i = 0; i < arr.length; i++) {
-        sum += arr[i];
-    }
-    return sum;
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
 }
-
 
 /*
     Original:
@@ -77,9 +73,8 @@ function sumArray(arr) {
     if the number is divisible by BOTH 5 and 11 and `false` otherwise.
 */
 function threeOrSeven(num) {
-    return num % 3 === 0 || num % 7 === 0;
+  return num % 3 === 0 || num % 7 === 0;
 }
-
 
 /*
     Original:
@@ -91,16 +86,15 @@ function threeOrSeven(num) {
     returns the number of consonants in the word.
 */
 function countVowels(word) {
-    const vowels = ["a", "e", "i", "o", "u"];
-    let count = 0;
-    for (let i = 0; i < word.length; i++) {
-        if (vowels.includes(word[i])) {
-            count++;
-        }
+  const vowels = ["a", "e", "i", "o", "u"];
+  let count = 0;
+  for (let i = 0; i < word.length; i++) {
+    if (vowels.includes(word[i])) {
+      count++;
     }
-    return count;
+  }
+  return count;
 }
-
 
 /*
     Original:
@@ -119,16 +113,15 @@ function countVowels(word) {
     The `.join('')` function joins the elements in an array into a string.
 */
 function whisper(str) {
-    return str.toLowerCase();
+  return str.toLowerCase();
 }
-
 
 module.exports = {
-    plusTen,
-    returnSevens,
-    bothStringsIncluded,
-    productArray,
-    fiveAndEleven,
-    countConsonants,
-    alternatingLetters   
-}
+  plusTen,
+  returnSevens,
+  bothStringsIncluded,
+  productArray,
+  fiveAndEleven,
+  countConsonants,
+  alternatingLetters,
+};
