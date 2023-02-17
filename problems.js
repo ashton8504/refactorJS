@@ -21,11 +21,13 @@ function plusTen(num) {
     multiples of 7 that are less than max.
 */
 function returnSevens(max) {
+  let array = [];
   for (let i = 0; i < max; i++) {
     if (i % 7 === 0) {
-      console.log(i);
+      array.push(i);
     }
   }
+  return array;
 }
 
 /*
@@ -42,6 +44,10 @@ function returnSevens(max) {
     the sentence, and `false` if neither or only 1 is found.
 */
 function eitherStringIncluded(sentence, word1, word2) {
+  return sentence.includes(word1) || sentence.includes(word2);
+}
+
+function bothStringsIncluded(sentence, word1, word2) {
   return sentence.includes(word1) && sentence.includes(word2);
 }
 
@@ -63,6 +69,14 @@ function sumArray(arr) {
   return sum;
 }
 
+function productArray(arr) {
+  let mul = 1;
+  for (let i = 0; i < arr.length; i++) {
+    mul *= arr[i];
+  }
+  return mul;
+}
+
 /*
     Original:
     Write a function `threeOrSeven` that takes in a number and returns `true`
@@ -74,6 +88,10 @@ function sumArray(arr) {
 */
 function threeOrSeven(num) {
   return num % 3 === 0 || num % 7 === 0;
+}
+
+function fiveAndEleven(num) {
+  return num % 5 === 0 && num % 11 === 0;
 }
 
 /*
@@ -90,6 +108,17 @@ function countVowels(word) {
   let count = 0;
   for (let i = 0; i < word.length; i++) {
     if (vowels.includes(word[i])) {
+      count++;
+    }
+  }
+  return count;
+}
+
+function countConsonants(word) {
+  let letters = "bcdfghjklmnpqrstvwxyz";
+  let count = 0;
+  for (let i = 0; i < word.length; i++) {
+    if (letters.includes(word[i])) {
       count++;
     }
   }
@@ -114,6 +143,20 @@ function countVowels(word) {
 */
 function whisper(str) {
   return str.toLowerCase();
+}
+
+function alternatingLetters(str) {
+  const arr = str.split("");
+  let isUpper = false;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== " ") {
+      arr[i] = isUpper ? arr[i].toUpperCase() : arr[i].toLowerCase();
+      isUpper = !isUpper;
+    }
+  }
+
+  return arr.join("");
 }
 
 module.exports = {
