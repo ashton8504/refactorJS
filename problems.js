@@ -20,7 +20,7 @@ function plusTen(num) {
     Write a function `returnSevens(max)` that returns an array that contains
     multiples of 7 that are less than max.
 */
-function printSevens(max) {
+function returnSevens(max) {
   for (let i = 0; i < max; i++) {
     if (i % 7 === 0) {
       console.log(i);
