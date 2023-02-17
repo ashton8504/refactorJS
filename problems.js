@@ -20,9 +20,9 @@ function plusTen(num) {
     Write a function `returnSevens(max)` that returns an array that contains
     multiples of 7 that are less than max.
 */
-function printFives(max) {
+function printSevens(max) {
   for (let i = 0; i < max; i++) {
-    if (i % 5 === 0) {
+    if (i % 7 === 0) {
       console.log(i);
     }
   }
@@ -42,7 +42,7 @@ function printFives(max) {
     the sentence, and `false` if neither or only 1 is found.
 */
 function eitherStringIncluded(sentence, word1, word2) {
-  return sentence.includes(word1) || sentence.includes(word2);
+  return sentence.includes(word1) && sentence.includes(word2);
 }
 
 /*
